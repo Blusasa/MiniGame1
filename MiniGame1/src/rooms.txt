@@ -1,0 +1,50 @@
+0
+Master Bedroom
+false
+General Description
+DOWN WEST
+1
+Upstairs Bedroom
+false
+General Description
+EAST DOWN
+2
+Living Room
+false
+General Description
+WEST NORTH SOUTH UP
+3
+Kitchen
+false
+General Description
+WEST NORTH SOUTH
+4
+Sunroom
+false
+General Description
+WEST NORTH
+5
+Dining Room
+false
+General Description
+EAST NORTH SOUTH
+6
+Front Room
+false
+General Description
+EAST SOUTH
+7
+Master Bathroom
+false
+General Description
+EAST
+8
+Basement
+false
+General Description
+UP
+9
+Outside
+false
+General Description
+none
