@@ -1,22 +1,18 @@
 package gameObjects;
 
 public class Room {
-	public enum EXITS{
-		NORTH, SOUTH, EAST, WEST, UP, DOWN
-	}
-
 	private int roomNum;
 	private String name;
 	private boolean hasVisited;
 	private String description;
-	private String exits;
+	private List<Exit> exits;
 	
-	public Room(int roomNum, String name, boolean hasVisited, String description, String exits) {
+	public Room(int roomNum, String name, boolean hasVisited, String description) {
 		this.roomNum = roomNum;
 		this.name = name;
 		this.hasVisited = hasVisited;
 		this.description = description;
-		this.exits = exits;
+		this.exits = new ArrayList<>();
 	}
 
 	public boolean hasVisited() {
@@ -38,9 +34,9 @@ public class Room {
 	public String getDescription() {
 		return description;
 	}
-
-	public String getExits() {
-		return exits;
+	
+	public void addExit(Exit exit) {
+		exits.add(exit);
 	}
 	
 	@Override

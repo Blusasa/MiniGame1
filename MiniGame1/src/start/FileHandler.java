@@ -8,21 +8,10 @@ import java.util.concurrent.Callable;
 
 import gameObjects.Room;
 
-public class FileHandler {
+public class LoadService {
 	private static FileHandler fileHandler;
 	private final String roomFilePath = "/rooms.txt";
 	private final String exitFilePath = "/exits.txt";
-	
-	private FileHandler() {}
-	
-	protected static FileHandler getFileHandler() {
-		if(fileHandler == null) {
-			fileHandler = new FileHandler();
-			return fileHandler;
-		}
-		
-		return fileHandler;
-	}
 	
 	protected Callable<List<Room>> loadRooms(){
 		
@@ -30,7 +19,7 @@ public class FileHandler {
 			public List<Room> call(){
 				InputStream stream = this.getClass().getResourceAsStream(roomFilePath);
 				Scanner in = new Scanner(stream);
-		
+				
 				List<Room> rooms = new ArrayList<Room>();
 				while(in.hasNext()) {
 					int roomNum = Integer.parseInt(in.nextLine());
@@ -62,7 +51,12 @@ public class FileHandler {
 									.filter(r -> r.getRoomNum() == roomNum)
 									.findFirst()
 									.get();
-			
+			for(int i = 1; i <= 6; i++) {
+				String[] kvPair = in.nextLine().split(" ");
+				if(!kvPair[1].equalsIgnoreCase("-1")) {
+					
+				}
+			}
 		}
 	}
 }
