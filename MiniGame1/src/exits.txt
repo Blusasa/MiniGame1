@@ -1,29 +1,63 @@
 0 Master Bed
-WEST 1
-DOWN 2
+NORTH -1
 SOUTH 7
-1 Upstairs Bes
+EAST -1
+WEST 1
+UP -1
+DOWN 2
+1 Upstairs Bed
+NORTH -1
+SOUTH -1
 EAST 0
+WEST -1
+UP -1
 DOWN 2
 2 Living Room
-WEST 6
 NORTH 9
 SOUTH 3
+EAST -1
+WEST 6
 UP 0
+DOWN -1
 3 Kitchen
 NORTH 2
 SOUTH 4
+EAST -1
 WEST 5
+UP -1
+DOWN -1
 4 Sunroom
 NORTH 3
+SOUTH -1
+EAST -1
+WEST -1
+UP -1
 DOWN 8
 5 Dining Room
-EAST 3
 NORTH 6
+SOUTH -1
+EAST 3
+WEST -1
+UP -1
+DOWN -1
 6 Front Room
-EAST 2
+NORTH -1
 SOUTH 5
+EAST 2
+WEST -1
+UP -1
+DOWN -1
 7 Master Bathroom
 NORTH 0
+SOUTH -1
+EAST -1
+WEST -1
+UP -1
+DOWN -1
 8 Basement
+NORTH -1
+SOUTH -1
+EAST -1
+WEST -1
 UP 4
+DOWN -1

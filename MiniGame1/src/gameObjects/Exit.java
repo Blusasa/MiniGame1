@@ -16,8 +16,9 @@ public class Exit {
 	}
 	
 	protected void getExits() {
-		exitPoints.
+		
 	}
+	
 	protected boolean isValidExit(DIRECTION direction, Room room) {
 		return exitPoints.get(direction).getRoomNum() == room.getRoomNum();
 	}
