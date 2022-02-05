@@ -27,7 +27,7 @@ public class Main {
 			System.out.println("Loading timed out");
 		}
 		
-		
+		loader.populateRoomExits(rooms);
 		GameController gc = new GameController(rooms);
 		gc.printRooms();
 		gc.startGame();

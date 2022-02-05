@@ -1,5 +1,8 @@
 package gameObjects;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Room {
 	private int roomNum;
 	private String name;
