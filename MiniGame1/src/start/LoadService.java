@@ -55,19 +55,18 @@ public class LoadService {
 									.findFirst()
 									.get();
 			for(int i = 1; i <= 6; i++) {
-				String[] kvPair = in.nextLine().split(" ");
+				String[] exitLine = in.nextLine().split(" ");
+				String direction = exitLine[0];
+				int nextRoomNum = Integer.parseInt(exitLine[1]);
+				
 				//if an exit is not a valid exit, than it is paired with a -1 value in the file. This "if" skips all of those
-				if(!kvPair[1].equalsIgnoreCase("-1")) {
-					String direction = kvPair[0];
-					DIRECTION exitPoint = DIRECTION.valueOf(direction);
-					Room exitRoom = rooms.stream()
-							.filter(r -> r.getRoomNum() == Integer.parseInt(kvPair[1]))
+				if(nextRoomNum >= 0) {
+					DIRECTION directionENUM = DIRECTION.valueOf(direction);
+					Room nextRoom = rooms.stream()
+							.filter(r -> r.getRoomNum() == nextRoomNum)
 							.findFirst()
 							.get();
-					
-					Map<DIRECTION, Room> exitPair = new HashMap<>();
-					exitPair.put(exitPoint, exitRoom);
-					Exit exit = new Exit(exitPair, currentRoom);
+					Exit exit = new Exit(directionENUM, nextRoom);
 					currentRoom.addExit(exit);
 				}
 			}

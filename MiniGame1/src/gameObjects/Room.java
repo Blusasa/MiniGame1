@@ -3,6 +3,8 @@ package gameObjects;
 import java.util.ArrayList;
 import java.util.List;
 
+import gameObjects.Exit.DIRECTION;
+
 public class Room {
 	private int roomNum;
 	private String name;
@@ -40,6 +42,15 @@ public class Room {
 	
 	public void addExit(Exit exit) {
 		exits.add(exit);
+	}
+	
+	public Exit getExit(DIRECTION direction) {
+		return exits.stream().filter(e -> e.getDirection() == direction)
+				.findFirst().get();
+	}
+	
+	public boolean isValidExit(DIRECTION direction) {
+		return exits.stream().anyMatch(e -> e.getDirection() == direction);
 	}
 	
 	@Override
