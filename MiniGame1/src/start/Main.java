@@ -11,7 +11,7 @@ import gameObjects.Room;
 
 public class Main {
 	public static void main(String[] args) {
-		FileHandler loader = FileHandler.getFileHandler();
+		LoadService loader = new LoadService();
 		
 		FutureTask<List<Room>> loadingRooms = new FutureTask<>(loader.loadRooms());
 		List<Room> rooms = null;
@@ -26,6 +26,7 @@ public class Main {
 		} catch (TimeoutException e) {
 			System.out.println("Loading timed out");
 		}
+		
 		
 		GameController gc = new GameController(rooms);
 		gc.printRooms();

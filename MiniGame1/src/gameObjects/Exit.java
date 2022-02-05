@@ -16,7 +16,7 @@ public class Exit {
 	}
 	
 	protected void getExits() {
-		exitPoints.
+		exitPoints
 	}
 	
 	protected boolean isValidExit(DIRECTION direction, Room room) {
