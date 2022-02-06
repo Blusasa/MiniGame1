@@ -2,7 +2,17 @@ package gameObjects;
 
 public class Exit {
 	public enum DIRECTION{
-		NORTH, SOUTH, EAST, WEST, UP, DOWN
+		NORTH("N"), SOUTH("S"), EAST("E"), WEST("W"), UP("U"), DOWN("D");
+		
+		private String abrv;
+
+		private DIRECTION(String abrv) {
+			this.abrv = abrv;
+		}
+		
+		public String getAbbreviation() {
+			return this.abrv;
+		}
 	}
 	
 	private DIRECTION direction;

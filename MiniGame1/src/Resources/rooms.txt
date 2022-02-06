@@ -1,0 +1,40 @@
+0
+Master Bedroom
+false
+You wake up in your bedroom. Something feels off but you can't quite tell what. Your bathroom is to the SOUTH of the room. xNLxYou open your door and look WEST down the hall to the other bedroom. It's door is closed with a faint light coming underneath it. xNLxYou think you hear a noise coming from the living room DOWN the stairs.
+1
+Upstairs Bedroom
+false
+You open up the bedroom door to see a complete mess. The lamp is on when your daughter has been gone all weekend. It looks like someone has broken in. Clothes are scattered all around, every drawer is open, pictures and paintings are all crooked. You scan the room and are startled by the blood red "SOON" written on the wall. You feel yourself start to tense as you look back down the hall EAST towards your bedroom. For a second you thinking you hear a faint scream come from DOWN the stairs.
+2
+Living Room
+false
+SOUTH WEST
+3
+Kitchen
+false
+NORTH SOUTH WEST
+4
+Sunroom
+false
+NORTH DOWN
+5
+Dining Room
+false
+NORTH EAST
+6
+Front Room
+false
+SOUTH EAST
+7
+Master Bathroom
+false
+NORTH
+8
+Basement
+false
+Very hesitantly, you head down the basement stairs UP
+9
+Outside
+false
+DONE

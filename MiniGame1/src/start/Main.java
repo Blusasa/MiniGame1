@@ -12,22 +12,10 @@ import gameObjects.Room;
 public class Main {
 	public static void main(String[] args) {
 		LoadService loader = new LoadService();
-		
-		FutureTask<List<Room>> loadingRooms = new FutureTask<>(loader.loadRooms());
-		List<Room> rooms = null;
-		new Thread(loadingRooms).start();
-		
-		try {
-			rooms = loadingRooms.get(5, TimeUnit.SECONDS);
-		} catch (InterruptedException e) {
-			System.out.println("Error while loading");
-		} catch (ExecutionException e) {
-			e.printStackTrace();
-		} catch (TimeoutException e) {
-			System.out.println("Loading timed out");
-		}
-		
+
+		List<Room> rooms = loader.loadRooms();
 		loader.populateRoomExits(rooms);
+		
 		GameController gc = new GameController(rooms);
 		gc.printRooms();
 		gc.startGame();

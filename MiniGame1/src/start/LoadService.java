@@ -2,43 +2,34 @@ package start;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.concurrent.Callable;
 
 import gameObjects.Exit;
 import gameObjects.Exit.DIRECTION;
 import gameObjects.Room;
 
 public class LoadService {
-	private final String roomFilePath = "/rooms.txt";
-	private final String exitFilePath = "/exits.txt";
+	private final String roomFilePath = "/Resources/rooms.txt";
+	private final String exitFilePath = "/Resources/exits.txt";
 	
-	protected Callable<List<Room>> loadRooms(){
-		
-		Callable<List<Room>> loaderThread = new Callable<List<Room>>() {
-			public List<Room> call(){
-				InputStream stream = this.getClass().getResourceAsStream(roomFilePath);
-				Scanner in = new Scanner(stream);
-				
-				List<Room> rooms = new ArrayList<Room>();
-				while(in.hasNext()) {
-					int roomNum = Integer.parseInt(in.nextLine());
-					String title = in.nextLine();
-					boolean hasVisited = Boolean.parseBoolean(in.nextLine());
-					String description = in.nextLine();
-			
-					Room room = new Room(roomNum, title, hasVisited, description);
-					rooms.add(room);
-				}
-				in.close();
-				return rooms;
-			}
-		};
-		
-		return loaderThread;
+	protected List<Room> loadRooms(){
+		InputStream stream = this.getClass().getResourceAsStream(roomFilePath);
+		Scanner in = new Scanner(stream);
+
+		List<Room> rooms = new ArrayList<Room>();
+		while(in.hasNext()) {
+			int roomNum = Integer.parseInt(in.nextLine());
+			String title = in.nextLine();
+			boolean hasVisited = Boolean.parseBoolean(in.nextLine());
+			String description = in.nextLine();
+
+			Room room = new Room(roomNum, title, hasVisited, description);
+			rooms.add(room);
+		}
+		in.close();
+		return rooms;
+
 	}
 	
 	protected boolean populateRoomExits(List<Room> rooms) {
