@@ -20,6 +20,7 @@ public class GameController {
 		for(Room r: rooms) {
 			System.out.println(r.toString());
 		}
+		System.out.println("-------------");
 	}
 	
 	public void startGame() {
@@ -31,16 +32,27 @@ public class GameController {
 	}
 	
 	private void playRoom(Room room, Scanner in) {
-		System.out.println(room.getRoomNum() + " " + room.getName());
-		room.setHasVisited(true);
-		System.out.println(room.hasVisited());
-		System.out.println(room.getDescription());
-		System.out.println("Where would you like to go?");
-		DIRECTION direction = DIRECTION.valueOf(in.nextLine());
-		if(room.isValidExit(direction)) {
-			playRoom(room.getExit(direction).getNextRoom(), in);
-		} else {
-			System.out.println("Sorry that was a in valid direction. Please try again");
+		if(room.getRoomNum() == 9) {
+			
 		}
+		
+		System.out.println("-----------------");
+		room.printForGame();
+		room.setHasVisited(true);
+		System.out.println("Where would you like to go?\n----------------");
+		
+		String input = in.nextLine();
+		input = input.toUpperCase();
+		
+		while(true) {
+			if(room.isValidExit(input)) {
+				break;
+			}
+			System.out.println("That was an invalid input or direction. Try again!");
+			input = in.nextLine();
+			input = input.toUpperCase();
+		}
+		
+		playRoom(room.getExit(input), in);
 	}
 }
