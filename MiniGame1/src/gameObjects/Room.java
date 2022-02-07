@@ -106,7 +106,7 @@ public class Room {
 	}
 	
 	/**Method: hasVisitedString
-	 * for private use to get a String 
+	 * for private use to get a better String representation of the hasVisited boolean
 	 * @return
 	 */
 	private String hasVisitedString() {
@@ -149,6 +149,13 @@ public class Room {
 		exits.add(exit);
 	}
 	
+	/**Method: getExit
+	 * 
+	 * @param input: the input the user gave for the direction they want to go
+	 * @param unlockFlag: flag for if the locked exit has been unlocked
+	 * @return the room that matches the exit chosen by the user
+	 * @throws LockedExitException: exception for trying to enter a locked room
+	 */
 	public Room getExit(String input, boolean unlockFlag) throws LockedExitException{
 		Room exitRoom;
 		
@@ -171,14 +178,24 @@ public class Room {
 					.getNextRoom();
 		}
 		
+		//this checks to see if the current room is a) a locked room and b) if the "lock" has been unlocked to prevent entering rooms prematurely
 		if(!unlockFlag && exitRoom.isLockRoom()) {
+			//exception thrown with message to be used by gameController upon trying to enter a locked room
 			throw new LockedExitException("This exit is currently locked, keep exploring rooms.");
 		}
 		
 		return exitRoom;
 	}
 	
+	/**Method: isValidInput
+	 * runs through all the exits of the room and sees if the input aligns with any of them
+	 * @param input: the direction that the user is requesting to go
+	 * @return if the requested input matches to any of the exits for the room instance
+	 */
 	public boolean isValidInput(String input) {
+		/*the user can input single char abbreviations of directions so this checks for validity if the user does it
+		 *by searching for any matching abbreviations of directions from all exits in the room
+		*/
 		if(input.length() == 1) {
 			return exits.stream()
 					.anyMatch(e -> e.getDirection().getAbbreviation().equalsIgnoreCase(input));
@@ -196,6 +213,9 @@ public class Room {
 		return exits.stream().anyMatch(e -> e.getDirection() == direction);
 	}
 	
+	/**Method: printForGameSpecial
+	 * This will print out the special line of a room instead of the first description after the key room has been entered
+	 */
 	public void printForGameSpecial() {
 		System.out.println("Room: " + this.roomNum);
 		System.out.println(this.name + " / " + this.hasVisitedString());
@@ -208,6 +228,9 @@ public class Room {
 		System.out.println();
 	}
 	
+	/**Method: printForGame
+	 * This method will print details of the game in a format more suitable for presentation to the user as opposed to the toString method
+	 */
 	public void printForGame() {
 		System.out.println("Room: " + this.roomNum);
 		System.out.println(this.name + " / " + this.hasVisitedString());
@@ -217,6 +240,9 @@ public class Room {
 		listExits();
 	}
 	
+	/**Method: listExits
+	 * A utility method to be used if the user needs to be reminded of the possible room exits
+	 */
 	public void listExits() {
 		if(exits.size() > 0) {
 			System.out.print("You can go");
@@ -228,6 +254,9 @@ public class Room {
 		}
 	}
 	
+	/**Method: toString
+	 * A string representation of a room instance for usage on first load of game
+	 */
 	@Override
 	public String toString() {
 		String originalDescription = "";
