@@ -1,40 +1,70 @@
 0
+false
+false
 Master Bedroom
 false
-You wake up in your bedroom. Something feels off but you can't quite tell what. Your bathroom is to the SOUTH of the room. xNLxYou open your door and look WEST down the hall to the other bedroom. It's door is closed with a faint light coming underneath it. xNLxYou think you hear a noise coming from the living room DOWN the stairs.
+You wake up confused and with a headache. You're in your bedroom. Something feels off but you can't quite tell what. Your bathroom is to the SOUTH of the room. xNLxYou open your door and look WEST down the hall to the other bedroom. It's door is closed with a faint light coming underneath it. xNLxYou think you hear a noise coming from the living room DOWN the stairs.
+none
 1
-Upstairs Bedroom
 false
-You open up the bedroom door to see a complete mess. The lamp is on when your daughter has been gone all weekend. It looks like someone has broken in. Clothes are scattered all around, every drawer is open, pictures and paintings are all crooked. You scan the room and are startled by the blood red "SOON" written on the wall. You feel yourself start to tense as you look back down the hall EAST towards your bedroom. For a second you thinking you hear a faint scream come from DOWN the stairs.
+false
+Daughter's Bedroom
+false
+You open up the bedroom door to see a complete mess. The lamp is on when your daughter has been gone all weekend. It looks xNLxlike someone has broken in. Clothes are scattered all around, every drawer is open, pictures and paintings are all crooked. xNLxYou scan the room and are startled by the blood red "SOON" written on the wall. You feel yourself start to tense as you look xNLxback down the hall EAST towards your bedroom. For a second you thinking you hear a faint scream come from DOWN the stairs.
+none
 2
+false
+false
 Living Room
 false
-SOUTH WEST
+The first thing you notice in your living room is the TV turned on but its showing nothing but static. The lights are off xNLxbut with the little bit coming off the TV you see your daughter's toys laid out on the ground. They spell out "COME PLAY WITH ME MOMMY". xNLxYou turn around and feel like you saw a figure walk to the WEST in your front room. A light just came on in the kitchen to xNLxthe SOUTH. All of the craziness makes you think it's in your head and you should just go back UP to bed.
+GET OUT OF HERE
 3
+false
+false
 Kitchen
 false
-NORTH SOUTH WEST
+Other than the stove light that randomly turned on the kitchen seems almost normal. Until you look down and realize that all xNLx4 eyes of the stove are on. You and your husband ordered out for the night and didn't cook so why are they on? Just as you think that xNLxyou hear your daughters voice coming from the Sunroom to the SOUTH. You look past the fridge, WEST into the Dining Room to see xNLxpapers all over the table. The tv in the living room to the NORTH is starting to be distracting.
+RUN TO THE DOOR NOW
 4
-Sunroom
 false
-NORTH DOWN
+false
+Sun room
+false
+You step into the Sun room, where you can see into your pitch black backyard. It hits you that you don't know where your husband and xNLxdaughter are. Then you hear her giggles DOWN in the basement. Maybe you can find your husband by going back NORTH into the kitchen.xNLxBefore you take another step, red eyes look as to appear in the forest behind your backyard.
+You grab your house keys off a chair. RUN!
 5
+false
+false
 Dining Room
 false
-NORTH EAST
+As you step into the the dining room you see a few scratch marks on the walls. You look down on the table and there are several drawingsxNLxthat look like they were done by your daughter. Each of them with roughly the same picture. Your husband, you, and her, but with somexNLxother creature standing behind your daughter. You notice she gives you x's for eyes in all the drawings. Something is very wrong.xNLxYou see the light coming in from the EAST from your kitchen. You think you can make out a shadow in the Front Room to the NORTH.
+none
 6
+false
+false
 Front Room
 false
-SOUTH EAST
+The only lights that the front room can get are from the windows, living room, or dining room. It's pitch black outside and in the dining roomxNLxand there's only a faint glow coming from the TV in the Living Room to the EAST. The entire room feels cold and dark. You start toxNLxstare into the darkest corner of the room and make out what looks like a very tall creature's shadow. As soon as you're convinced it's therexNLxit seems to go away. Is it the same creature from the dining room to the SOUTH?
+none
 7
+false
+false
 Master Bathroom
 false
-NORTH
+You head into the bathroom, hoping to find your husband since he wasn't in bed with you. Instead you find all of his stuff laying around thexNLxsink area. It's weird because he usually cleans up all of his stuff before bed. He must've been in a rush. Your bedroom is behind you to the NORTH.
+none
 8
+true
+false
 Basement
 false
-Very hesitantly, you head down the basement stairs UP
+Very hesitantly, you head down the basement stairs. At this point your heart is beating out of your chest. You haven't seen your husband or daughter xNLxyet but hear her voice down here. You get to the basement and see your husband standing and facing a corner. You call out his name,xNLxand you scream as he turns around. His eyes are gone and his mouth sewn shut. Your daughter pops up out of the darkxNLxwith all black eyes saying in a deep voice "COME PLAY WITH ME AND DADDY, MOMMY". The same red eyes from the backyard appear in the darkest corner xNLxof the basement followed by a low growl. YOU HAVE TO GET OUT. Go UP to the Sunroom and keep heading NORTH to the front door in your Living Room.
+none
 9
+false
+true
 Outside
 false
-DONE
+You burst out of the front door terrified. You don't know what's happened to your husband or daughter but you didn't have time to think.xNLxYou get to the end of the driveway and turn around to see your husband, daughter, and a giant half man/half ram with bright red eyesxNLxstanding in the living room window staring at you. You stop in the middle of the road and let out a huge scream.xNLxYou were so focused on the horror in the house you never even heard the car coming. You wake up confused and with a headache.xNLxYou're in your bedroom and something feels off......
+none

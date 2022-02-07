@@ -1,3 +1,5 @@
 /Exit$DIRECTION.class
 /Exit.class
 /Room.class
+/IllegalExitException.class
+/LockedExitException.class
