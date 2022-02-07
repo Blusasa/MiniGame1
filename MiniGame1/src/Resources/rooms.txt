@@ -32,7 +32,7 @@ false
 Sun room
 false
 You step into the Sun room, where you can see into your pitch black backyard. It hits you that you don't know where your husband and xNLxdaughter are. Then you hear her giggles DOWN in the basement. Maybe you can find your husband by going back NORTH into the kitchen.xNLxBefore you take another step, red eyes look as to appear in the forest behind your backyard.
-RUN
+You grab your house keys off a chair. RUN!
 5
 false
 false
