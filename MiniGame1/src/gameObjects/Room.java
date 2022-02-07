@@ -1,3 +1,12 @@
+/**Class: Room
+ * @author: Michael Conner
+ * @version: 1.0
+ * Course: ITEC 3860 Spring 2022
+ * Written: February 6, 2021
+ * 
+ * This class handles all data for a room object. It also handles validating input for any of its exits and ensures that no locked exit can be entered upon request
+ */
+
 package gameObjects;
 
 import java.util.ArrayList;
@@ -15,8 +24,12 @@ public class Room {
 	private boolean lockRoom;
 	private List<Exit> exits;
 	
-	/*
-	 * Constructor used for generic rooms that are neither keys nor locks
+	/**Constructor
+	 * builds a generic room object
+	 * @param roomNum: the number of the room
+	 * @param name: The name of the room 
+	 * @param hasVisited: boolean that is for whether the player has been to this room before 
+	 * @param description: the description of the room
 	 */
 	public Room(int roomNum, String name, boolean hasVisited, String description) {
 		this.roomNum = roomNum;
@@ -28,6 +41,14 @@ public class Room {
 		this.exits = new ArrayList<>();
 	}
 	
+	/**Constructor
+	 * builds a room object that has a special line
+	 * @param roomNum: the number of the room
+	 * @param name: The name of the room 
+	 * @param hasVisited: boolean that is for whether the player has been to this room before 
+	 * @param description: the description of the room
+	 * @param specialLine
+	 */
 	public Room(int roomNum, String name, boolean hasVisited, String description, String specialLine) {
 		this.roomNum = roomNum;
 		this.keyRoom = false;
@@ -38,8 +59,13 @@ public class Room {
 		this.exits = new ArrayList<>();
 	}
 	
-	/*
-	 * Constructor used if a room instance is a key room
+	/**Constructor
+	 * builds a room that unlocks another room
+	 * @param roomNum: the number of the room
+	 * @param keyRoom: boolean flag to determine if it is a room that unlocks other rooms
+	 * @param name: The name of the room 
+	 * @param hasVisited: boolean that is for whether the player has been to this room before 
+	 * @param description: the description of the room
 	 */
 	public Room(int roomNum, boolean keyRoom, String name, boolean hasVisited, String description) {
 		this.roomNum = roomNum;
@@ -50,8 +76,13 @@ public class Room {
 		this.exits = new ArrayList<>();
 	}
 	
-	/*
-	 * Constructor used if a room instance is a lock room
+	/**Constructor
+	 * builds a room that requires another room to be explored first
+	 * @param roomNum: the number of the room
+	 * @param name: The name of the room 
+	 * @param lockRoom" boolean flag that to determine if another room must be explored first
+	 * @param hasVisited: boolean that is for whether the player has been to this room before 
+	 * @param description: the description of the room
 	 */
 	public Room(int roomNum, String name, boolean lockRoom, boolean hasVisited, String description) {
 		this.roomNum = roomNum;
@@ -62,14 +93,22 @@ public class Room {
 		this.description = divideDescription(description);
 		this.exits = new ArrayList<>();
 	}
-
+	
+	/**Method: divideDescription
+	 * turns the long single line description into an array of lines to make for better readability to the user
+	 * @param description: the single line description passed in from the txt file
+	 * @return
+	 */
 	private String[] divideDescription(String description) {
-		//Some descriptions could be longer than others so they may take up varying amounts of lines. In the file, in each description String, "xNLx" will signify a new line that is used
-		//here to split the single line into an array of strings that can all fit on screen
+		//the token xNLx was added to each description to mark off when a new line should start, so this splits the line into multiple lines based off that token
 		String[] allTokens = description.split("xNLx");
 		return allTokens;
 	}
-
+	
+	/**Method: hasVisitedString
+	 * for private use to get a String 
+	 * @return
+	 */
 	private String hasVisitedString() {
 		return this.hasVisited ? "Has been visited": "Hasn't been visited";
 	}
