@@ -13,6 +13,7 @@ public class LoadService {
 	private final String roomFilePath = "/Resources/rooms.txt";
 	private final String exitFilePath = "/Resources/exits.txt";
 	
+	
 	protected List<Room> loadRooms(){
 		InputStream stream = this.getClass().getResourceAsStream(roomFilePath);
 		Scanner in = new Scanner(stream);
@@ -20,11 +21,22 @@ public class LoadService {
 		List<Room> rooms = new ArrayList<Room>();
 		while(in.hasNext()) {
 			int roomNum = Integer.parseInt(in.nextLine());
+			boolean keyRoom = Boolean.parseBoolean(in.nextLine());
+			boolean lockRoom = Boolean.parseBoolean(in.nextLine());
 			String title = in.nextLine();
 			boolean hasVisited = Boolean.parseBoolean(in.nextLine());
 			String description = in.nextLine();
-
-			Room room = new Room(roomNum, title, hasVisited, description);
+			String specialLine = in.nextLine();
+			Room room = null;
+			if(!specialLine.equalsIgnoreCase("none")) {
+				room = new Room(roomNum, title, hasVisited, description, specialLine);
+			} else if(keyRoom){
+				room = new Room(roomNum, keyRoom, title, hasVisited, description);
+			} else if(lockRoom) {
+				room = new Room(roomNum, title, lockRoom, hasVisited, description);
+			} else {
+				room = new Room(roomNum, title, hasVisited, description);
+			}
 			rooms.add(room);
 		}
 		in.close();
@@ -45,6 +57,7 @@ public class LoadService {
 									.filter(r -> r.getRoomNum() == roomNum)
 									.findFirst()
 									.get();
+			
 			for(int i = 1; i <= 6; i++) {
 				String[] exitLine = in.nextLine().split(" ");
 				String direction = exitLine[0];
